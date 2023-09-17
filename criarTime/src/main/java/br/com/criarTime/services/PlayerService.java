@@ -43,7 +43,7 @@ public class PlayerService {
                     lastNamesOfPlayers.add(playerName[playerName.length - 1]);
                 }
 
-                if (lastNamesOfPlayers.contains(lastName)) {
+                if (!lastNamesOfPlayers.contains(lastName)) {
                     createPlayer(name, team);
                     return;
                 }
