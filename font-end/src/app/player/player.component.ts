@@ -15,19 +15,23 @@ export class PlayerComponent {
   ){};
 
   player: Player = new Player();
+  loading: boolean = false
 
   postPlayer():void{
     if(this.player.nome === null){
       alert("Imput esta vazio")
       return
     }
+    this.loading = true;
     this.playerService.createPlayer(this.player).subscribe(
       result => {
         this.player = new Player();
         this.playerService.playerModified()
+        this.loading = false
       },
       error =>{
         console.log(error)
+        this.loading = false
       }
     )
   }
@@ -43,4 +47,7 @@ export class PlayerComponent {
       }
     )
   }
+
+
+
 }
