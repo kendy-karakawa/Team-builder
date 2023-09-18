@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Player } from './player';
 import { Observable, Subject } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ import { Observable, Subject } from 'rxjs';
 export class PlayerService {
 
   constructor(private http: HttpClient) {};
-  private url = "http://localhost:8080/jogador";
+  private url = `${environment.API}/jogador`;
   
   private playerModifiedSubject = new Subject<void>();
   playerModified$ = this.playerModifiedSubject.asObservable();
