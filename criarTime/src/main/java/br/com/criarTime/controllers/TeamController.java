@@ -9,12 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.criarTime.entity.TeamEntity;
 import br.com.criarTime.services.TeamService;
 
 @RestController
 @RequestMapping("/times")
-@CrossOrigin(origins = {"http://localhost:4200"})
+@CrossOrigin(origins = {"https://team-builder-web.vercel.app"})
 public class TeamController {
     
     @Autowired

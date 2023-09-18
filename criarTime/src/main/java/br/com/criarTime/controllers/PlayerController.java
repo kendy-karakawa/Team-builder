@@ -13,7 +13,7 @@ import br.com.criarTime.services.PlayerService;
 
 @RestController
 @RequestMapping("/jogador")
-@CrossOrigin(origins = {"http://localhost:4200"})
+@CrossOrigin(origins = {"https://team-builder-web.vercel.app"})
 public class PlayerController {
     
     @Autowired
