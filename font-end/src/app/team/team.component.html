@@ -1,0 +1,20 @@
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+  <div *ngFor="let team of teams" class="w-44">
+    <button
+      class="w-44 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
+    >
+      Time: {{ team.name }}
+    </button>
+    <!-- Dropdown menu -->
+    
+    <div class="divide-y rounded-lg mt-1">
+      <ul
+        *ngFor="let player of team.playerList"
+        class="px-5 py-2.5 text-gray-700 bg-gray-300 font-medium rounded-lg text-sm mb-1 " 
+      >
+        <li>{{ player.nome }}</li>
+      </ul>
+    </div>      
+    
+  </div>
+</div>
