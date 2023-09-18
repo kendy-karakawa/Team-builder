@@ -18,8 +18,8 @@ import br.com.criarTime.entity.TeamEntity;
 import br.com.criarTime.repositories.TeamRepository;
 import br.com.criarTime.services.TeamService;
 
-    @SpringBootTest
-    public class TeamServiceTest {
+@SpringBootTest
+public class TeamServiceTest {
 
 
     @InjectMocks
